@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Juros Simples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 400px;
+        }
+
+        h1 {
+            color: #007bff;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Juros Simples</h1>
+        <form id="interest-form">
+            <label for="capital">Informe o valor do capital (R$) investido:</label>
+            <input type="number" id="capital" required>
+            <label for="taxa">Informe o valor da taxa (%) aplicada:</label>
+            <input type="number" id="taxa" required>
+            <label for="tempo">Informe a duração, em meses, do tempo aplicado:</label>
+            <input type="number" id="tempo" required>
+            <button type="button" onclick="calcular()">Calcular</button>
+            <h2>Resultado:</h2>
+            <p id="resultadoJuros"></p>
+            <p id="resultadoCapitalFinal"></p>
+        </form>
+    </div>
+
+    <script>
+        function calcular() {
+            var capital = parseFloat(document.getElementById("capital").value);
+            var taxa = parseFloat(document.getElementById("taxa").value);
+            var tempo = parseFloat(document.getElementById("tempo").value);
+
+            var juros = (capital * (taxa / 100) * tempo).toFixed(2);
+            var capitalFinal = (capital + parseFloat(juros)).toFixed(2);
+
+            document.getElementById("resultadoJuros").textContent = "O valor dos juros é: R$ " + juros;
+            document.getElementById("resultadoCapitalFinal").textContent = "Capital final: R$ " + capitalFinal;
+        }
+    </script>
+</body>
+</html>

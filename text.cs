@@ -1,0 +1,44 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace projeto_matematica
+{
+
+    internal class text
+    {
+        /* CÓDIGO DE EXECUÇÃO DO PROJETO MATEMÁTICA */
+        // Criado por Rafael Carvalho em 23/09/2023
+
+        static void Main()
+        {
+            int escolha;
+            Console.WriteLine("Escolha uma área da matemática:\n 1 - Operacoes simples\n 2 - Teorema de pitagoras\n 3 - Cálculo de Juros");
+
+            if (int.TryParse(Console.ReadLine(), out escolha))
+            {
+                switch (escolha)
+                {
+                    case 1:
+                        code executar = new code();
+                        executar.OperacoesSimples();
+                        break;
+                    case 2:
+                        code_2 executar2 = new code_2();
+                        executar2.Teorema();
+                        break;
+                    case 3:
+                        code_3 executar3 = new code_3();
+                        executar3.Juros();
+                        break;
+                    default:
+                        Console.WriteLine("Opção inválida.Por favor, insira um número válido.");
+                        break;
+                }
+            }
+        }
+    }
+}

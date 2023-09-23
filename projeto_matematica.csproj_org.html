@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadoras Matemáticas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 400px;
+        }
+
+        h1 {
+            color: #007bff;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Calculadora Simples -->
+    <div class="container">
+        <h1>Calculadora Simples</h1>
+        <form id="calculator-form">
+            <label for="n1">Digite o primeiro número:</label>
+            <input type="number" id="n1" required>
+            <label for="n2">Digite o segundo número:</label>
+            <input type="number" id="n2" required>
+            <button type="button" onclick="calcular()">Calcular</button>
+            <h2>Resultados:</h2>
+            <p id="resultadoSoma"></p>
+            <p id="resultadoSubtracao"></p>
+            <p id="resultadoMultiplicacao"></p>
+            <p id="resultadoDivisao"></p>
+            <p id="resultadoPotencia"></p>
+            <p id="resultadoRaiz"></p>
+        </form>
+    </div>
+
+    <!-- Teorema de Pitágoras -->
+    <div class="container">
+        <h1>Teorema de Pitágoras</h1>
+        <form id="pythagoras-form">
+            <label for="cateto1">Digite o valor do primeiro cateto:</label>
+            <input type="number" id="cateto1" required>
+            <label for="cateto2">Digite o valor do segundo cateto:</label>
+            <input type="number" id="cateto2" required>
+            <button type="button" onclick="calcularPitagoras()">Calcular</button>
+            <h2>Resultado:</h2>
+            <p id="resultadoHipotenusa"></p>
+        </form>
+    </div>
+
+    <!-- Calculadora de Juros Simples -->
+    <div class="container">
+        <h1>Calculadora de Juros Simples</h1>
+        <form id="interest-form">
+            <label for="capital">Informe o valor do capital (R$) investido:</label>
+            <input type="number" id="capital" required>
+            <label for="taxa">Informe o valor da taxa (%) aplicada:</label>
+            <input type="number" id="taxa" required>
+            <label for="tempo">Informe a duração, em meses, do tempo aplicado:</label>
+            <input type="number" id="tempo" required>
+            <button type="button" onclick="calcularJuros()">Calcular</button>
+            <h2>Resultado:</h2>
+            <p id="resultadoJuros"></p>
+            <p id="resultadoCapitalFinal"></p>
+        </form>
+    </div>
+
+    <script>
+        // Funções de cálculo aqui
+        // ...
+    </script>
+</body>
+</html>
