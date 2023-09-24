@@ -15,38 +15,49 @@ namespace projeto_matematica
 
         static void Main()
         {
-            int escolha;
-            Console.WriteLine("Escolha uma área da matemática:\n 1 - Operacoes simples\n 2 - " +
-                "Teorema de pitagoras\n 3 - Cálculo de Juros\n "+
-                "4 - Números primos\n 5 - Área do Triângulo");
-
-            if (int.TryParse(Console.ReadLine(), out escolha))
+            bool continuar = true;
+            while (continuar)
             {
-                switch (escolha)
+                int escolha;
+                Console.WriteLine("Escolha uma área da matemática:\n 1 - Operacoes simples\n 2 - " +
+                    "Teorema de pitagoras\n 3 - Cálculo de Juros\n " +
+                    "4 - Números primos\n 5 - Área do Triângulo");
+
+                if (int.TryParse(Console.ReadLine(), out escolha))
                 {
-                    case 1:
-                        code executar = new code();
-                        executar.OperacoesSimples();
-                        break;
-                    case 2:
-                        code_2 executar2 = new code_2();
-                        executar2.Teorema();
-                        break;
-                    case 3:
-                        code_3 executar3 = new code_3();
-                        executar3.Juros();
-                        break;
-                    case 4:
-                        code_4 executar4 = new code_4();
-                        executar4.Primos();
-                        break;  
-                    case 5:
-                        code_5 executar5 = new code_5();
-                        executar5.AreaTri();
-                        break;
-                    default:
-                        Console.WriteLine("Opção inválida.Por favor, insira um número válido.");
-                        break;
+                    switch (escolha)
+                    {
+                        case 1:
+                            code executar = new code();
+                            executar.OperacoesSimples();
+                            break;
+                        case 2:
+                            code_2 executar2 = new code_2();
+                            executar2.Teorema();
+                            break;
+                        case 3:
+                            code_3 executar3 = new code_3();
+                            executar3.Juros();
+                            break;
+                        case 4:
+                            code_4 executar4 = new code_4();
+                            executar4.Primos();
+                            break;
+                        case 5:
+                            code_5 executar5 = new code_5();
+                            executar5.AreaTri();
+                            break;
+                        default:
+                            Console.WriteLine("Opção inválida.Por favor, insira um número válido.");
+                            break;
+                    }
+                    Console.WriteLine("Deseja selecionar outra área da matemática? (sim/não)");
+                    string resposta = Console.ReadLine().ToLower();
+                    continuar = (resposta == "sim");
+                }
+                else
+                {
+                    Console.WriteLine("Opção inválida. Por favor, insira um número válido.");
                 }
             }
         }
