@@ -77,12 +77,13 @@
     <Compile Include="code.cs" />
     <Compile Include="code_2.cs" />
     <Compile Include="code_3.cs" />
+    <Compile Include="code_4.cs" />
+    <Compile Include="code_5.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="text.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="projeto_matematica_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.8">
