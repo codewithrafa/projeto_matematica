@@ -17,15 +17,23 @@ namespace projeto_matematica
         }
         public void Teorema()
         {
-            Console.WriteLine("Digite o valor do primeiro cateto: ");
-            double cateto1 = Convert.ToDouble(Console.ReadLine());
+            char cont = 's';
+            while (cont == 's')
+            {
+                Console.WriteLine("Digite o valor do primeiro cateto: ");
+                double cateto1 = Convert.ToDouble(Console.ReadLine());
 
-            Console.WriteLine("Digite o valor do segundo cateto: ");
-            double cateto2 = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine("Digite o valor do segundo cateto: ");
+                double cateto2 = Convert.ToDouble(Console.ReadLine());
 
-            // Chama a função para calcular a hipotenusa
-            double hipot = Hipotenusa(cateto1, cateto2);
-            Console.WriteLine($"O valor da hipotenusa é: {hipot}");
+                // Chama a função para calcular a hipotenusa
+                double hipot = Hipotenusa(cateto1, cateto2);
+                Console.WriteLine($"O valor da hipotenusa é: {((decimal)hipot)}");
+
+                Console.WriteLine("Deseja realizar outro cálculo? s/n");
+                cont = char.Parse(Console.ReadLine());
+                Console.Clear();
+            }
         }
     }
 }

@@ -13,21 +13,30 @@ namespace projeto_matematica
         public double b;
         public double h;
 
-       public double CalculoTri()
+        public double CalculoTri()
         {
             return (b * h) / 2;
         }
         public void AreaTri()
         {
-            Console.WriteLine("Digite a base do triângulo:");
-            double.TryParse(Console.ReadLine(), out b);
-            Console.WriteLine("------------------------------");
+            char cont = 's';
+            while (cont == 's')
+            {
+                Console.WriteLine("Digite a base do triângulo:");
+                double.TryParse(Console.ReadLine(), out b);
+                Console.WriteLine("------------------------------");
 
-            Console.WriteLine("Digite a altura do triângulo:");
-            double.TryParse(Console.ReadLine(), out h);
-            Console.WriteLine("------------------------------");
+                Console.WriteLine("Digite a altura do triângulo:");
+                double.TryParse(Console.ReadLine(), out h);
+                Console.WriteLine("------------------------------");
 
-            Console.WriteLine($"A área do triângulo é: {CalculoTri()}");
+                Console.Clear();
+                Console.WriteLine($"A área do triângulo é: {CalculoTri()}");
+
+                Console.WriteLine("Deseja realizar outro cálculo? s/n");
+                cont = char.Parse(Console.ReadLine());
+                Console.Clear();
+            }
 
         }
     }

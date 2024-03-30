@@ -14,23 +14,31 @@ namespace projeto_matematica
 
         static double CalculoJuros(double c, double i, double t)
         {
-            return c * (i/100) * t;
+            return c * (i / 100) * t;
         }
 
         public void Juros()
         {
-            Console.WriteLine("Informe o valor do capital (R$) investido:");
-            double c = Convert.ToDouble(Console.ReadLine()); 
-            
-            Console.WriteLine("Informe o valor da taxa (%) aplicado:");
-            double i = Convert.ToDouble(Console.ReadLine());
+            char cont = 's';
+            while (cont == 's')
+            {
+                Console.WriteLine("Informe o valor do capital (R$) investido:");
+                double c = Convert.ToDouble(Console.ReadLine());
 
-            Console.WriteLine("Informe a duração, em meses, do tempo aplicado:");
-            double t = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine("Informe o valor da taxa (%) aplicado:");
+                double i = Convert.ToDouble(Console.ReadLine());
 
-            double juros = CalculoJuros(c, i, t);
-            Console.WriteLine($"O valor do juros é {juros}R$");
-            Console.WriteLine($"Capital final: {c + juros}");
+                Console.WriteLine("Informe a duração, em meses, do tempo aplicado:");
+                double t = Convert.ToDouble(Console.ReadLine());
+
+                double juros = CalculoJuros(c, i, t);
+                Console.WriteLine($"O valor do juros é {juros}R$");
+                Console.WriteLine($"Capital final: {c + juros}");
+
+                Console.WriteLine("Deseja realizar outro cálculo? s/n");
+                cont = char.Parse(Console.ReadLine());
+                Console.Clear();
+            }
         }
     }
 }

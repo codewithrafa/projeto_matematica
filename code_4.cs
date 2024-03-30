@@ -28,7 +28,10 @@ namespace projeto_matematica
         }
         public void Primos()
         {
-            Console.Write("Digite um número inteiro positivo: ");
+            char cont = 's';
+            while (cont == 's')
+            {
+                Console.Write("Digite um número inteiro positivo: ");
             int numero = int.Parse(Console.ReadLine());
 
             if (numPrimo(numero))
@@ -38,6 +41,10 @@ namespace projeto_matematica
             else
             {
                 Console.WriteLine("O número não é primo.");
+            }
+                Console.WriteLine("Deseja verificar outro número? s/n");
+                cont = char.Parse(Console.ReadLine());
+                Console.Clear();
             }
         }
     }

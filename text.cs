@@ -21,7 +21,7 @@ namespace projeto_matematica
                 int escolha;
                 Console.WriteLine("Escolha uma área da matemática:\n 1 - Operacoes simples\n 2 - " +
                     "Teorema de pitagoras\n 3 - Cálculo de Juros\n " +
-                    "4 - Números primos\n 5 - Área do Triângulo");
+                    "4 - Números primos\n 5 - Área do Triângulo \n 6 - Trigonometria");
 
                 if (int.TryParse(Console.ReadLine(), out escolha))
                 {
@@ -47,13 +47,18 @@ namespace projeto_matematica
                             code_5 executar5 = new code_5();
                             executar5.AreaTri();
                             break;
+                        case 6:
+                            code_6 executar6 = new code_6();
+                            executar6.Trigonometria();
+                            break;
                         default:
                             Console.WriteLine("Opção inválida.Por favor, insira um número válido.");
                             break;
                     }
-                    Console.WriteLine("Deseja selecionar outra área da matemática? (sim/não)");
+                    Console.WriteLine("Deseja selecionar outra área da matemática? (s/n)");
                     string resposta = Console.ReadLine().ToLower();
-                    continuar = (resposta == "sim");
+                    continuar = (resposta == "s");
+                    Console.Clear();
                 }
                 else
                 {
