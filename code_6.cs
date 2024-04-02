@@ -36,7 +36,7 @@ namespace projeto_matematica
                     seno = 0;
                     break;
             }
-            return seno * Math.Sin(angRad);
+            return seno;
         }
 
 
@@ -123,7 +123,7 @@ namespace projeto_matematica
                         Console.WriteLine("Digite o valor da hipotenusa:");
                         h = double.Parse(Console.ReadLine());
 
-                        Console.WriteLine($"O seno do ângulo {c}° é: {((decimal)CalculoSen(c, o, h))}");
+                        Console.WriteLine($"O seno do ângulo {c}° é: {(CalculoSen(c, o, h))}");
                         break;
 
                     case 2:
@@ -143,7 +143,7 @@ namespace projeto_matematica
                         Console.WriteLine("Digite o valor da hipotenusa:");
                         h = double.Parse(Console.ReadLine());
 
-                        Console.WriteLine($"O cosseno do ângulo {c}° é: {((decimal)CalculoCos(c, adj, h))}");
+                        Console.WriteLine($"O cosseno do ângulo {c}° é: {(decimal)CalculoCos(c, adj, h)}");
                         break;
 
                     case 3:
@@ -162,7 +162,7 @@ namespace projeto_matematica
                         o = double.Parse(Console.ReadLine());
                         Console.WriteLine("Digite o valor do cateto adjacente:");
                         adj = double.Parse(Console.ReadLine());
-                        Console.WriteLine($"A tangente do ângulo {c}° é: {((decimal)CalculoTan(c, o, adj))}");
+                        Console.WriteLine($"A tangente do ângulo {c}° é: {(decimal)CalculoTan(c, o, adj)}");
                         break;
                     default:
                         Console.WriteLine("Opção inválida.");

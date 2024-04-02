@@ -21,7 +21,7 @@ namespace projeto_matematica
                 int escolha;
                 Console.WriteLine("Escolha uma área da matemática:\n 1 - Operacoes simples\n 2 - " +
                     "Teorema de pitagoras\n 3 - Cálculo de Juros\n " +
-                    "4 - Números primos\n 5 - Área do Triângulo \n 6 - Trigonometria");
+                    "4 - Números primos\n 5 - Área do Triângulo \n 6 - Trigonometria \n 7 - Medidas de tendência central");
 
                 if (int.TryParse(Console.ReadLine(), out escolha))
                 {
@@ -50,6 +50,11 @@ namespace projeto_matematica
                         case 6:
                             code_6 executar6 = new code_6();
                             executar6.Trigonometria();
+                            break;
+                        
+                        case 7:
+                            code_7 executar7= new code_7();
+                            executar7.Centrais();
                             break;
                         default:
                             Console.WriteLine("Opção inválida.Por favor, insira um número válido.");
