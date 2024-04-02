@@ -32,8 +32,8 @@ namespace projeto_matematica
                 double t = Convert.ToDouble(Console.ReadLine());
 
                 double juros = CalculoJuros(c, i, t);
-                Console.WriteLine($"O valor do juros é {juros}R$");
-                Console.WriteLine($"Capital final: {c + juros}");
+                Console.WriteLine($"O valor do juros é R$ {juros}");
+                Console.WriteLine($"Capital final: R$ {c + juros}");
 
                 Console.WriteLine("Deseja realizar outro cálculo? s/n");
                 cont = char.Parse(Console.ReadLine());

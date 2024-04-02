@@ -50,11 +50,11 @@ namespace projeto_matematica
                 double.TryParse(Console.ReadLine(), out n2);
                 Console.WriteLine("------------------------------");
 
-                Console.WriteLine($"A soma dos números {(n1,n2)} é: {Somar()}");
-                Console.WriteLine($"A subtração dos números {(n1, n2)} é: {Subtracao()}");
-                Console.WriteLine($"A multiplicação dos números {(n1, n2)} é: {Mult()}");
-                Console.WriteLine($"A potência dos números{(n1, n2)} é: {(decimal)Potencia()}");
-                Console.WriteLine($"A raíz quadrada da potência {(n1, n2)} é: {(decimal)Raiz()}\n");
+                Console.WriteLine($"A soma dos números ({n1} + {n2}) é: {Somar()}");
+                Console.WriteLine($"A subtração dos números ({n1} - {n2}) é: {Subtracao()}");
+                Console.WriteLine($"A multiplicação dos números ({n1} x {n2}) é: {Mult()}");
+                Console.WriteLine($"A potência do número {n1} elevado a {n2} é: {(decimal)Potencia()}");
+                Console.WriteLine($"A raíz quadrada da potência {(decimal)Potencia()} é: {(decimal)Raiz()}\n");
 
                 Console.WriteLine("Deseja realizar outro cálculo? s/n");
                 cont = char.Parse(Console.ReadLine());

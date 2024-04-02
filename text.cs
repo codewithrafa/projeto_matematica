@@ -19,12 +19,12 @@ namespace projeto_matematica
             while (continuar)
             {
                 int escolha;
-                Console.WriteLine("Escolha uma área da matemática:\n 1 - Operacoes simples\n 2 - " +
-                    "Teorema de pitagoras\n 3 - Cálculo de Juros\n " +
-                    "4 - Números primos\n 5 - Área do Triângulo \n 6 - Trigonometria \n 7 - Medidas de tendência central");
-
+                Console.WriteLine("Escolha uma área da matemática:\n 1 - Operações básicas\n 2 - Teorema de pitágoras\n 3 - Cálculo de Juros\n " +
+                "4 - Números primos\n 5 - Geometria plana \n 6 - Trigonometria \n 7 - Medidas de tendência central");
+      
                 if (int.TryParse(Console.ReadLine(), out escolha))
                 {
+                    Console.Clear();
                     switch (escolha)
                     {
                         case 1:
@@ -45,7 +45,7 @@ namespace projeto_matematica
                             break;
                         case 5:
                             code_5 executar5 = new code_5();
-                            executar5.AreaTri();
+                            executar5.Geo();
                             break;
                         case 6:
                             code_6 executar6 = new code_6();

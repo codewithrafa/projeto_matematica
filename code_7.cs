@@ -28,12 +28,12 @@ namespace projeto_matematica
             // Verifica se a quantidade de números é ímpar
             if (nums.Length % 2 != 0)
             {
-                // Se for ímpar, retorna o número do meio
+                // Se for ímpar, retorna o número central
                 return nums[nums.Length / 2];
             }
             else
             {
-                // Se for par, retorna a média dos dois números do meio
+                // Se for par, retorna a média dos dois números centrais
                 int meio1 = nums.Length / 2;
                 int meio2 = meio1 - 1;
                 return (nums[meio1] + nums[meio2]) / 2.0;
