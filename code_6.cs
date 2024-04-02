@@ -36,7 +36,7 @@ namespace projeto_matematica
                     seno = 0;
                     break;
             }
-            return seno;
+            return seno * Math.Sin(angRad);
         }
 
 
@@ -94,8 +94,6 @@ namespace projeto_matematica
             char cont = 's';
             while (cont == 's')
             {
-
-            
             Console.WriteLine("Olá! Aqui, iremos calcular medidas trigonométricas. \n");
 
             Console.WriteLine("Para começar, indique qual será o cálculo: \n" +
